@@ -1,0 +1,402 @@
+body {
+    margin     : 0;
+    font-family: "PingFang SC", "Helvetica Neue", "Microsoft Yahei", sans-serif;
+}
+
+header {
+    border-bottom: 1px solid #eaecef;
+}
+
+header .logo {
+    height: 28px;
+}
+
+.container {
+    max-width : 1056px;
+    padding   : 0 16px;
+    box-sizing: border-box;
+    margin    : 0 auto;
+}
+
+header>div {
+    flex           : 1;
+    width          : 100%;
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    box-sizing     : border-box;
+    height         : 80px;
+}
+
+header .menu a {
+    color          : #172b4d;
+    display        : inline-block;
+    margin-left    : 28px;
+    text-decoration: none;
+    font-size      : 16px;
+    user-select    : none;
+    padding        : 5px 0;
+}
+
+header .menu a.current {
+    color        : cornflowerblue;
+    border-bottom: 2px solid cornflowerblue;
+}
+
+.dark {
+    background-color: #f1f2f6;
+}
+
+.main {
+    width          : 100%;
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: space-between;
+    padding        : 120px 0;
+}
+
+.video {
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    max-width: 528px;
+    padding: 20px 0;
+}
+
+.video img {
+    width    : 100%;
+    border-radius: 7px;
+    cursor       : pointer;
+}
+
+.slogan {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    box-sizing     : border-box;
+    max-width      : 528px;
+    padding-right  : 20px;
+}
+
+.slogan .title {
+    font-size     : 42px;
+    color         : #172b4d;
+    letter-spacing: 2px;
+    font-weight   : 600;
+}
+
+.slogan .description {
+    font-size: 20px;
+    color    : #505f79;
+}
+
+.btns {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slogan .btns .btn {
+    font-size       : 16px;
+    margin-bottom   : 12px;
+    padding         : 10px 20px;
+    border-radius   : 3px;
+    background-color: #172b4d;
+    color           : #fff;
+    cursor          : pointer;
+    user-select     : none;
+}
+
+.slogan .btns .main-download {
+    margin-right: 10px;
+}
+
+.slogan .btns .light {
+    background-color: rgb(131, 146, 180);
+}
+
+.siema {
+    max-width : 800px;
+    width     : 100%;
+    overflow  : hidden;
+    text-align: center;
+    height    : 215px;
+}
+
+.siema .slide {
+    width : 100%;
+    height: 215px;
+}
+
+.siema .say {
+    font-size: 22px;
+    padding  : 30px 0;
+    color    : #172b4d;
+}
+
+.siema .who {
+    margin-top: 20px;
+    font-size : 14px;
+    color     : #7f8c8d;
+}
+
+.siema img {
+    width: 912px;
+}
+
+.siema-btn {
+    position           : absolute;
+    top                : 50%;
+    background-color   : #E3e4e6;
+    width              : 36px;
+    height             : 36px;
+    border-radius      : 50%;
+    opacity            : 0.7;
+    z-index            : 9999;
+    background-image   : url(assets/img/here-arrow.svg);
+    background-position: center;
+    background-repeat  : no-repeat;
+}
+
+.siema-btn-disable {
+    opacity: 0.3;
+}
+
+.siema-btn:hover {
+    opacity: 1;
+}
+
+.siema-btn-disable:hover {
+    opacity: 0.3;
+}
+
+.siema-prev {
+    left     : 0;
+    transform: rotate(180deg);
+}
+
+.siema-next {
+    right: 0;
+}
+
+.mask {
+    background: #000;
+    opacity   : 0.6;
+    position  : fixed;
+    top       : 0;
+    bottom    : 0;
+    left      : 0;
+    right     : 0;
+    z-index   : 99997;
+}
+
+.close-video {
+    top          : 10px;
+    right        : 10px;
+    z-index      : 99999;
+    position     : fixed;
+    width        : 30px;
+    height       : 30px;
+    border-radius: 50%;
+}
+
+.watch-video {
+    max-width : 1024px;
+    max-height: 576px;
+    position  : fixed;
+    top       : 0;
+    bottom    : 0;
+    margin    : auto;
+    left      : 0;
+    right     : 0;
+    z-index   : 99998;
+}
+
+.watch-video video {
+    width: 100%;
+}
+
+.plugin-desc {
+    color   : #ccc;
+    position: absolute;
+    bottom  : 50px;
+}
+
+.utools-plugins,
+.utools-input,
+.utools-panel {
+    width          : 100%;
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: center;
+    padding        : 30px 0;
+    box-sizing     : border-box;
+    position       : relative;
+}
+
+.utools-plugins {
+    padding: 0 16px;
+}
+
+.utools-plugins video {
+    max-width: 1000px;
+    width    : 100%;
+    margin   : 30px 0 60px 0;
+    cursor   : pointer;
+    outline  : none;
+}
+
+.content-title {
+    font-size: 32px;
+    color    : #172b4d;
+    padding  : 20px 0;
+}
+
+.content-desc {
+    font-size  : 16px;
+    color      : #505f79;
+    line-height: 1.75;
+}
+
+
+.platform {
+    display        : flex;
+    justify-content: space-between;
+    flex-wrap      : wrap;
+    padding        : 30px 0;
+}
+
+.platform>div {
+    padding   : 28px 0;
+    text-align: center;
+    font-size : 16px;
+    color     : #172b4d;
+}
+
+.platform .logo {
+    height         : 50px;
+    width          : 50px;
+    background-size: contain !important;
+    margin         : 0 auto;
+}
+
+.platform .remark {
+    padding: 20px 0;
+}
+
+.platform .download {
+    font-size       : 14px;
+    display         : inline;
+    padding         : 8px 16px;
+    border-radius   : 3px;
+    background-color: #172b4d;
+    color           : #fff;
+    cursor          : pointer;
+    user-select     : none;
+}
+
+.platform .download:hover {
+    opacity: 0.9;
+}
+
+.platform .download-32 {
+    margin-top: 20px;
+    cursor    : pointer;
+}
+
+.platform .download-32:hover {
+    opacity: 0.8;
+}
+
+.footer {
+    color          : #111;
+    padding        : 35px 0;
+    margin         : 0 auto;
+    flex           : 1;
+    width          : 100%;
+    max-width      : 1056px;
+    display        : flex;
+    justify-content: space-between;
+    align-items    : top;
+    flex-wrap      : wrap;
+    box-sizing     : border-box;
+    line-height    : 2;
+    text-align     : left;
+}
+
+.footer .footer-classify {
+    margin: 10px 0;
+}
+
+.footer .qrcode {
+    font-size        : 14px;
+    color            : #333;
+    display          : flex;
+    /* flex-direction: column; */
+    justify-content  : center;
+    align-items      : center;
+}
+
+.footer .qrcode img {
+    width : 100px;
+    height: 100px;
+}
+
+.footer .qrcode>div {
+    padding-left: 20px;
+}
+
+.copyright {
+    font-size      : 14px;
+    color          : #7f8c8d;
+    padding        : 30px 0;
+    position       : relative;
+    border-top     : 1px solid #eaecef;
+    display        : flex;
+    justify-content: space-between;
+    flex-wrap      : wrap;
+}
+
+.footer a,
+.copyright a {
+    color          : #7f8c8d;
+    text-decoration: none;
+}
+
+.footer-secondary {
+    padding-top: 16px;
+    color      : #7f8c8d;
+}
+
+@media only screen and (max-width: 600px) {
+    .main {
+        padding: 50px 0;
+    }
+    .slogan {
+        padding-right: 0;
+    }
+    .slogan .title {
+        font-size     : 36px;
+        text-align: center;
+    }
+    .slogan .description {
+        font-size     : 18px;
+        padding-top   : 10px;
+        text-align: center;
+    }
+    .btns {
+        justify-content: center;
+    }
+    .content-title {
+        font-size: 20px;
+        word-break: break-all;
+    }
+    .platform {
+        justify-content: center;
+    }
+    .footer .qrcode {
+       min-width: 300px;
+       padding-bottom: 20px;
+    }
+}
